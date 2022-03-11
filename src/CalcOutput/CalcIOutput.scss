@@ -1,0 +1,18 @@
+@import "../Variables";
+
+.calc-output {
+  @include containers;
+  width: 100%;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.value {
+  font-size: 2rem;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,18 @@
+$my-navy-blue: #0C4A60;
+$my-orange:#EF6C33;
+$my-light-blue: #ABDFF1;
+$my-cream: #E1DDDB;
+
+@mixin borders() {
+  border-radius: 10px;
+}
+
+@mixin containers() {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: $my-navy-blue;
+  color: #ffffff;
+  @include borders;
+}

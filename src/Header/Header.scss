@@ -1,0 +1,9 @@
+@import "../Variables.scss";
+
+header {
+  width: 100%;
+  display: flex;
+  background: $my-navy-blue;
+  @include borders;
+  @include containers;
+}

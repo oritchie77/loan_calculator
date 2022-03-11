@@ -1,0 +1,7 @@
+@import "../Variables";
+
+.calc-Input {
+  @include containers;
+  width: 100%;
+  padding: 20px;
+}

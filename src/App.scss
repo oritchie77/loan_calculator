@@ -1,0 +1,17 @@
+@import "./Variables";
+
+body {
+  background: $my-light-blue;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+}
