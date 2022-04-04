@@ -2,7 +2,13 @@
 
 .input {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  input {
+    border-radius: 5px;
+    background: $my-light-blue;
+  }
   p {
     margin: 0;
   }

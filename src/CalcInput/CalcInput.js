@@ -17,17 +17,18 @@ const CalcInput = (props) => {
                 Id={'salary'}
                 value={props.salaryValue}
                 onChangeValue={props.onChangeSalaryInput}
+                lable={'£'}
             />
 
             <p>How much can you contribute each month</p>
 
-            <ContributionSlider
+            <Slider
                 sliderId={'contributionAmount'}
-                min={1}
-                max={500}
+                min={props.minContribution}
+                max={props.maxContribution}
                 defaultLenght={props.setContributionSliderValue}
                 value={props.contributionSliderValue}
-                onContribuitionChangeValue={props.onChangeContributionSlider}
+                onChangeValue={props.onChangeContributionSlider}
             />
             <p>How much do you want to borrow?</p>
             <Slider

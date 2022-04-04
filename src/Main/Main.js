@@ -7,7 +7,6 @@ import {useEffect, useState} from "react";
 
 const Main = () => {
 
-
     const [borrowSliderValue, setBorrowSliderValue] = useState(2000)
     const onChangeBorrowSlider = event => {
         setBorrowSliderValue(parseInt(event.target.value, 10));
@@ -23,15 +22,23 @@ const Main = () => {
         setSalaryValue(parseInt(event.target.value, 10));
     }
 
-    // const minMonthlyContribution = (salaryValue) => {
-    //     return parseInt(salaryValue / 12 * 0.1)
-    // }
-    //
-    // useEffect(() => {
-    //     setContributionSliderValue(minMonthlyContribution(salaryValue))
-    // }, [contributionSliderValue])
-    //
-    // let monthlyContibutionMinValue = minMonthlyContribution(salaryValue)
+    const [maxContribution, setMaxContribution] = useState(1)
+    const [minContribution, setMinContribution] = useState(1)
+
+    useEffect(() => {
+        setMinContribution(minMonthlyContribution())
+        setMaxContribution(maxMonthlyContribution())
+        setContributionSliderValue(minMonthlyContribution())
+    }, [salaryValue])
+
+
+    const minMonthlyContribution = () => {
+        return parseInt(salaryValue / 12 * 0.1)
+    }
+
+    const maxMonthlyContribution = () => {
+        return parseInt(salaryValue / 12)
+    }
 
     return (
         <main>
@@ -43,7 +50,8 @@ const Main = () => {
                 contributionSliderValue={contributionSliderValue}
                 setContributionSliderValue={setContributionSliderValue}
                 onChangeContributionSlider={onChangeContributionSlider}
-                // minValue={monthlyContibutionMinValue}
+                minContribution={minContribution}
+                maxContribution={maxContribution}
 
                 salaryValue={salaryValue}
                 setSalaryValue={setSalaryValue}

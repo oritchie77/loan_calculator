@@ -33,13 +33,13 @@ const CalcOutput = (props) => {
     return (
     <div className={'calc-output'}>
         <p>Loan amount:</p>
-        <p className={'value'}>£{props.borrowAmount}</p>
+        <p className={'value'}>£{props.borrowAmount.toLocaleString('en')}</p>
         <p>Monthly Contribution:</p>
-        <p className={'value'}>£{props.contributionAmount}</p>
+        <p className={'value'}>£{props.contributionAmount.toLocaleString('en')}</p>
         <p>Loan Duration:</p>
         <p className={'value'}>{loanDurationinYears()}</p>
         <p>last Month Payment:</p>
-        <p className={'value'}>£{lastMonthPayment()}</p>
+        <p className={'value'}>£{lastMonthPayment().toLocaleString('en')}</p>
     </div>
     )
 }
