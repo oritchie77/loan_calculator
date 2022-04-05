@@ -1,9 +1,7 @@
 
-import CalcButton from "../CalcButton/CalcButton";
 import './CalcInput.scss'
 import Input from "../Input/Input";
 import Slider from "../Slider/Slider";
-import ContributionSlider from "../ContributionSlider/ContributionSlider";
 
 const CalcInput = (props) => {
 
