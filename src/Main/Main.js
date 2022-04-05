@@ -25,20 +25,20 @@ const Main = () => {
     const [maxContribution, setMaxContribution] = useState(1)
     const [minContribution, setMinContribution] = useState(1)
 
+
+
     useEffect(() => {
-        setMinContribution(minMonthlyContribution())
+        const minMonthlyContribution = () => {
+            return parseInt(salaryValue / 12 * 0.1)
+        }
+
+        const maxMonthlyContribution = () => {
+            return parseInt(salaryValue / 12)
+        }
+            setMinContribution(minMonthlyContribution())
         setMaxContribution(maxMonthlyContribution())
         setContributionSliderValue(minMonthlyContribution())
     }, [salaryValue])
-
-
-    const minMonthlyContribution = () => {
-        return parseInt(salaryValue / 12 * 0.1)
-    }
-
-    const maxMonthlyContribution = () => {
-        return parseInt(salaryValue / 12)
-    }
 
     return (
         <main>
